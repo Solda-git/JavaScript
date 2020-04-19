@@ -13,6 +13,7 @@ symb = [['', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',''], // 0- строка
 var parent = document.getElementById("main");
 
 var table = document.createElement("table");
+console.log(table);
 table.style.borderCollapse = "collapse";
 parent.append(table);
 

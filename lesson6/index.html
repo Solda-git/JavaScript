@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson6</title>
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+    
+    -->
+    <link rel="stylesheet" href="style.css">
+    <script src="Lesson6.js" defer></script> 
+ 	
+</head>
+<body onload = "initPage()">
+   <div class="container" id="main">
+   		<div class="buttons">
+			<button id = "task1" onClick = "activateDiv(1)">задание 1</button>
+			<button id = "task2" onClick = "activateDiv(2)">задание 2</button>
+			<button id = "task3" onClicK = "f3()">задание 3</button>
+		</div>
+	<hr>
+   </div> 
+   <div class="f1" id = "f1">
+   		<div class="pics">
+   			<img src="./small/Bear.jpg" alt="Bear" id="Bear" class="image" onclick = "f1()">
+   			<img src="./small/cover.jpg" alt="cover" id="cover" class="image" onclick = "f1()">
+   			<img src="./small/Cat.jpg" alt="Cat" id="Cat" class="image" onclick = "f1()">
+   		</div>
+   </div>
+   <div class="f2" id = "f2">
+   		<div class="basket">
+			<h2>Ваша корзина на сумму <span> 0</span> рублей.</h2>
+   			<table class="tbasket" id="tbasket">	
+   				<thead>
+   					<td>№</td>
+   					<td>Наименование</td>
+   					<td>Цена,руб.</td>
+   					<td>Кол-во</td>
+   					<td>Стоимость,руб.</td>
+   					<td>&nbsp;</td>
+   					<td>&nbsp;</td>
+   				</thead>
+   				<tbody class="tbody" id="tbody">
+   					
+   				</tbody>
+			</table>
+  			<button class = "button" id = "clear" onclick = "basket.clearBasket()">Сбросить</button> 
+  			<button class = "button" id = "Buy1" onclick = "basket.order()">Заказать</button> 
+   		</div>
+   		
+   		<hr>
+   		
+   		<div class="products">
+   			<div class="product" id = "product1" >
+   				<p class="productName" id = "pName1">Мишка</p>
+   				<img src="./small/Bear.jpg" alt="Bear" id="Bear" class="pImage">
+   				<p class="price">1000</p>
+				<button class = "button" id = "Buy1" onclick = "f2()">Купить</button> 
+   			</div>
+   			<div class="product" id = "product2">
+   				<p class="productName" id = "pName2">Чехол для проводов</p>
+   				<img src="./small/cover.jpg" alt="cover" id="cover" class="pImage">
+   				<p class="price">500</p>
+				<button class = "button" id = "Buy2" onclick = "f2()">Купить</button> 
+   			</div>
+   			<div class="product" id = "product3">
+   				<p class="productName" id = "pName3">Кошка с мышкой</p>
+   				<img src="./small/Cat.jpg" alt="Cat" id="Cat" class="pImage">
+   				<p class="price">3000</p>
+				<button class = "button" id = "Buy3" onclick = "f2()">Купить</button> 
+   			</div>
+   		</div>	
+   	</div>
+   <div class="f3" id = "f3">
+   		<div class="temp"><h3>Задание 3 в работе</h3></div>
+   		
+   </div>
+</body>
+</html>
