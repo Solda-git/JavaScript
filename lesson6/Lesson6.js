@@ -18,6 +18,9 @@ var div1 = document.getElementById("f1");
 var div2 = document.getElementById("f2");
 var div3 = document.getElementById("f3");
 
+imgPaths =  ['large/_Cat.jpg','large/cover.jpg','large/Bear.jpg'];
+
+
 basket = {
 	items: [],
 	records:0,
@@ -27,6 +30,11 @@ basket = {
 	incItem: fIncItem,
 	decItem: fDecItem,
 	order:	function(){
+		if (!this.records){
+		alert('Ваша корзиная пустая. Перед размещением заказа заполните ее.');
+			return;
+		}
+			
 		alert('Ваш заказ оформляется. Спасибо за покупку.');
 		this.clearBasket();		
 	},
@@ -163,23 +171,35 @@ function f1() {
 
 
 function f2() {
-	activateDiv(2);
-	 
-	/*
-	item.name = event.target.parentNode.getElementsByClassName("productName")[0].textContent;
-	item.price = event.target.parentNode.getElementsByClassName("price")[0].textContent;
-	item.amount = 1;*/
+	//activateDiv(2);
 	var product = event.target.parentNode;
-	
 	basket.addItem(new item(product.getElementsByClassName("productName")[0].textContent,
 							1,
 						    product.getElementsByClassName("price")[0].textContent));
-	
 }
 
+var curPicIndex = 0;
 function f3() {
 	activateDiv(3);
-	alert();
+	var imgFrame = document.getElementById("galery");
+	console.log(imgFrame);
+	imgFrame.src = imgPaths[curPicIndex];
 }
 
+function shiftRight(){
+	var imgFrame = document.getElementById("galery");
+	if (curPicIndex ==  imgPaths.length - 1)
+		curPicIndex = 0;
+	else
+		curPicIndex++;
+	imgFrame.src = imgPaths[curPicIndex];
+}
 
+function shiftLeft(){
+	var imgFrame = document.getElementById("galery");
+	if (curPicIndex == 0)
+		curPicIndex = imgPaths.length - 1;
+	else
+		curPicIndex--;
+	imgFrame.src = imgPaths[curPicIndex];
+}

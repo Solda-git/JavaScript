@@ -14,9 +14,9 @@
 <body onload = "initPage()">
    <div class="container" id="main">
    		<div class="buttons">
-			<button id = "task1" onClick = "activateDiv(1)">задание 1</button>
-			<button id = "task2" onClick = "activateDiv(2)">задание 2</button>
-			<button id = "task3" onClicK = "f3()">задание 3</button>
+			<button id = "task1" onClick = "activateDiv(1);">задание 1</button>
+			<button id = "task2" onClick = "activateDiv(2);">задание 2</button>
+			<button id = "task3" onClicK = "f3();">задание 3</button>
 		</div>
 	<hr>
    </div> 
@@ -55,25 +55,34 @@
    				<p class="productName" id = "pName1">Мишка</p>
    				<img src="./small/Bear.jpg" alt="Bear" id="Bear" class="pImage">
    				<p class="price">1000</p>
-				<button class = "button" id = "Buy1" onclick = "f2()">Купить</button> 
+				<button class = "button clearboth" id = "Buy1" onclick = "f2()">Купить</button> 
    			</div>
    			<div class="product" id = "product2">
    				<p class="productName" id = "pName2">Чехол для проводов</p>
    				<img src="./small/cover.jpg" alt="cover" id="cover" class="pImage">
    				<p class="price">500</p>
-				<button class = "button" id = "Buy2" onclick = "f2()">Купить</button> 
+				<button class = "button clearboth" id = "Buy2" onclick = "f2()">Купить</button> 
    			</div>
    			<div class="product" id = "product3">
    				<p class="productName" id = "pName3">Кошка с мышкой</p>
    				<img src="./small/Cat.jpg" alt="Cat" id="Cat" class="pImage">
    				<p class="price">3000</p>
-				<button class = "button" id = "Buy3" onclick = "f2()">Купить</button> 
+				<button class = "button clearboth" id = "Buy3" onclick = "f2()">Купить</button> 
    			</div>
    		</div>	
    	</div>
    <div class="f3" id = "f3">
-   		<div class="temp"><h3>Задание 3 в работе</h3></div>
-   		
+   		<div class="scroll">
+   			<p>
+   				<button class = "button scroll" id = "left" onclick = "shiftLeft();">&#60;&#60; </button> 
+   			</p>
+   			<p>
+   				<img src="" class = "picture scroll" id="galery" alt = "picture">
+   			</p>
+   			<p>
+   				 <button class = "button scroll" id = "left" onclick="shiftRight();">&#62;&#62;</button> 
+			</p>
+   		</div>
    </div>
 </body>
 </html>
